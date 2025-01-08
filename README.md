@@ -4,6 +4,8 @@
 # flx-hs
 > ewrite emacs-flx in Haskell
 
+[![CI](https://github.com/the-flx/flx-hs/actions/workflows/test.yml/badge.svg)](https://github.com/the-flx/flx-hs/actions/workflows/test.yml)
+
 ## 🔨 Usage
 
 WIP
