@@ -24,6 +24,14 @@ isCapital ch =
         Nothing -> False
         Just ch -> (isWord (Just ch)) && ch == (toUpper ch)
 
+-- Check if `lastCh` is the end of a word and `ch` the start of the next.
+isBoundary :: Maybe Char -> Char -> Bool
+isBoundary lastCh ch
+    | lastCh == Nothing = True
+    | not (isCapital lastCh) && (isCapital (Just ch)) = True
+    | not (isWord lastCh) && (isWord (Just ch)) = True
+    | otherwise = False
+
 -- Return best score matching `query` against `str`.
 score :: String -> String -> [Int]
 score str1 str2 =
